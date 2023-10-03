@@ -1,4 +1,5 @@
 //using MoreMountains.Feedbacks;
+using MoreMountains.Feedbacks;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,8 @@ public class Enemy1 : MonoBehaviour
     public Vector3 targetLocation;
     public Vector3 newPosition;
     private bool reachedMuffin;
+    public MMFeedbacks cameraShake;
+    public GameObject hitFX;
 
     void Start()
     {
@@ -19,6 +22,7 @@ public class Enemy1 : MonoBehaviour
         targetMuffin = GameObject.Find("Muffin").GetComponent<Transform>();
         targetLocation = new Vector3(targetMuffin.position.x, targetMuffin.position.y, targetMuffin.position.z);
         reachedMuffin = false;
+        hitFX.SetActive(false);
     }
 
     // Update is called once per frame
@@ -37,14 +41,24 @@ public class Enemy1 : MonoBehaviour
         if (collision.transform.tag == "Muffin")
         { 
             reachedMuffin = true;
+            
         }
 
-        if (collision.transform.tag == "Slash")
+
+
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.tag == "Slash")
         {
             Debug.LogError("Camera Shake");
+            cameraShake?.PlayFeedbacks();
+            hitFX.SetActive(true);
         }
-
     }
+
 
     private void OnCollisionStay(Collision collision)
     {

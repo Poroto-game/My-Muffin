@@ -175,6 +175,8 @@ MonoBehaviour:
     AmplitudeMax: {x: 1, y: 1, z: 1}
     RelativeAmplitude: 1
     UniformValues: 0
+    ForceVectorLength: 0
+    ForcedVectorLength: 1
     Curve:
       serializedVersion: 2
       m_Curve:
@@ -276,6 +278,8 @@ MonoBehaviour:
     AmplitudeMax: {x: 1, y: 1, z: 1}
     RelativeAmplitude: 1
     UniformValues: 0
+    ForceVectorLength: 0
+    ForcedVectorLength: 1
     Curve:
       serializedVersion: 2
       m_Curve:
@@ -341,7 +345,7 @@ MonoBehaviour:
     NoiseShiftMin: {x: 0, y: 0, z: 0}
     NoiseShiftMax: {x: 0, y: 0, z: 0}
   ScaleWiggleProperties:
-    WigglePermitted: 0
+    WigglePermitted: 1
     WiggleType: 1
     UseUnscaledTime: 0
     StartWigglingAutomatically: 1
@@ -377,6 +381,8 @@ MonoBehaviour:
     AmplitudeMax: {x: 1, y: 1, z: 1}
     RelativeAmplitude: 1
     UniformValues: 0
+    ForceVectorLength: 0
+    ForcedVectorLength: 1
     Curve:
       serializedVersion: 2
       m_Curve:
@@ -409,8 +415,8 @@ MonoBehaviour:
     CurvePingPong: 0
     PauseMin: 0
     PauseMax: 0
-    LimitedTime: 0
-    LimitedTimeTotal: 0
+    LimitedTime: 1
+    LimitedTimeTotal: 0.2
     LimitedTimeFalloff:
       serializedVersion: 2
       m_Curve:
@@ -436,7 +442,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     LimitedTimeResetValue: 1
-    LimitedTimeLeft: 0
+    LimitedTimeLeft: 0.2
     NoiseFrequencyMin: {x: 0, y: 0, z: 0}
     NoiseFrequencyMax: {x: 1, y: 1, z: 1}
     NoiseShiftMin: {x: 0, y: 0, z: 0}
@@ -568,7 +574,7 @@ MonoBehaviour:
   KeepPlayModeChanges: 0
   PerformanceMode: 0
   StopFeedbacksOnDisable: 0
-  PlayCount: 0
+  PlayCount: 4
   references:
     version: 2
     RefIds:
@@ -646,7 +652,7 @@ MonoBehaviour:
         FlickerDuration: 0.2
         FlickerOctave: 0.04
         FlickerColor: {r: 1, g: 0.078431375, b: 0.078431375, a: 1}
-        MaterialIndexes: 
+        MaterialIndexes: 00000000
         UseMaterialPropertyBlocks: 0
         SpriteRendererTextureProperty: _MainTex
     - rid: 2474283855434219524
@@ -718,9 +724,9 @@ MonoBehaviour:
         Owner: {fileID: 7556371883573508225}
         DebugActive: 0
         TargetWiggle: {fileID: 3810282489339234110}
-        WigglePosition: 1
+        WigglePosition: 0
         WigglePositionDuration: 0
         WiggleRotation: 0
         WiggleRotationDuration: 0
         WiggleScale: 1
-        WiggleScaleDuration: 0
+        WiggleScaleDuration: 0.2
