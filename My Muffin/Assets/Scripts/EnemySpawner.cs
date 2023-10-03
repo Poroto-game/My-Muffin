@@ -13,7 +13,7 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _enemySpawnFrequency = 2f;
+        _enemySpawnFrequency = Random.Range(3f, 8f);
     }
 
     // Update is called once per frame
@@ -24,6 +24,7 @@ public class EnemySpawner : MonoBehaviour
         if(spawnTimer > _enemySpawnFrequency)
         {
             Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+            _enemySpawnFrequency = Random.Range(3f, 7f);
             spawnTimer = 0;
         }
         
