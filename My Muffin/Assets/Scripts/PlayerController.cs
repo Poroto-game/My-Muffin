@@ -6,21 +6,21 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public GameObject slash;
-    //public MMFeedbacks slashSound;
+    public MMFeedbacks slashSound;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
             slash.SetActive(true);
-            //slashSound?.PlayFeedbacks();
+            slashSound?.PlayFeedbacks();
             StartCoroutine(ResetSlash());
             
         }
